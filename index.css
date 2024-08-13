@@ -1,6 +1,42 @@
 .main{
-    width: 100%;
-    height: auto;
+    width: 95%;
+    height: 800px;
     display: flex;
-    background-color: rgba(106, 106, 245, 0.445);
+    flex-direction: row;
+    margin: 25px;
+    justify-content: center;
+    border: 2px solid;
+    box-shadow: 0 0 10px rgb(207, 205, 205);
+}
+
+.first{
+    font-size: 30px;
+    width: 30%;
+    background-color: rgba(146, 245, 252, 0.849);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-style: groove;
+    text-align: center;
+
+    gap: 10px;
+}
+.second{
+    font-size: 30px;
+    border: 3px solid black;
+    background-image: url('bird-8788491_1280.webp');
+    background-size: cover;
+    background-position: center;
+    width: 70%;
+    padding-top: 100px;
+    padding-left: 100px;
+    gap: 15px;
+    
+    
+}
+body{
+    background-color: rgb(32, 30, 30);
+}
+h1{
+    line-height: 2;
 }
