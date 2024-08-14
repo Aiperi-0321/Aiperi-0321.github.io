@@ -1,0 +1,15 @@
+h1{
+    font-size: 60px;
+    text-align: center;
+}
+div{
+    margin-left: 35%;
+    margin-top: 5%;
+    flex-direction: row;
+    align-items: center;
+
+}
+body{
+    background-image: url("nice-presentation_1920x1080.jpg");
+    background-size: cover;
+}
