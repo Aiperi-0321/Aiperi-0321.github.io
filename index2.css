@@ -13,3 +13,9 @@ body{
     background-image: url("nice-presentation_1920x1080.jpg");
     background-size: cover;
 }
+ul{
+    font-size: 40px;
+}
+button{
+    font-size: 20px;
+}

@@ -15,5 +15,6 @@ deleteButton.onclick = function(){
     li.remove();
 };
 li.append(deleteButton);
+textInput.value = "";
 }
 }
