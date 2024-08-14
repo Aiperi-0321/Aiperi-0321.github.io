@@ -1,4 +1,4 @@
-function addList (){
+function addToList (){
     const textInput = document.querySelector("input");
     const text = textInput.value.trim()
 

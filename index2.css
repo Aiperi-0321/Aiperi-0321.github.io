@@ -7,6 +7,7 @@ div{
     margin-top: 5%;
     flex-direction: row;
     align-items: center;
+    gap: 5px;
 
 }
 body{
@@ -18,4 +19,5 @@ ul{
 }
 button{
     font-size: 20px;
+    margin-left: 20px;
 }
