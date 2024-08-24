@@ -39,14 +39,14 @@ createBtn.addEventListener("click", () => {
 });
 
 
-const input2 = document.querySelector(".fullname");
-const input3 = document.querySelector(".email");
+const input1 = document.querySelector(".fullname");
+const input2 = document.querySelector(".email");
 const savebtn = document.querySelector(".save");
 
 const createStudents = () => { 
 const students = {
-    fullname: input2.value,
-    email: input3.value,
+    fullname: input1.value,
+    email: input2.value,
     isActive: true,
 };
 fetch(url, {
@@ -59,8 +59,12 @@ fetch(url, {
 .then((response) => response.json())
 .then((student) => console.log(student))
 .catch((error) => console.log(error));
-}
+};
+
+
 savebtn.addEventListener("click", createStudents);
+
+
 
 const ul = document.querySelector("ul")
 function getStud(){
@@ -76,3 +80,24 @@ function getStud(){
     }).catch((error) => console.log(error))
 }
 getStud();
+
+
+const updatebtn = document.querySelector(".save")
+const updateStud = () => {
+    const updateStud = {
+        fullname: "Aiperi",
+        email: "aiperi@gmail.com",
+    };
+
+  fetch(url + "/14", {
+    method: "PUT",
+    headers: {
+        "Content-Type": "aplication/json",
+    }, body: JSON.stringify(updateStud),
+})
+  .then((res) => res.json())
+  .then((data) => {console.log(data);
+    getStud();
+  }).catch((error) => console.log(error))
+}
+updatebtn.addEventListener("click", updateStud);
