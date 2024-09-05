@@ -101,3 +101,37 @@ const updateStud = () => {
   }).catch((error) => console.log(error))
 }
 updatebtn.addEventListener("click", updateStud);
+
+
+
+function greeting(name, owner) {
+    if (name == owner) {
+        return "Hello, Owner";
+    }else{
+        return "Hello, Guest"
+    }
+};
+console.log( greeting ("Aiperi", "Aiperi"));
+console.log(greeting("Aiperi", "Janna"));
+
+function partOfMonth(month) {
+    if (month >= 1 && month <= 3) {
+        return "First quarter";
+    }else if(month >= 4 && month <= 6) {
+        return "Second quarter";
+    }else if(month >= 7 && month <= 9) {
+        return "Third quarter";
+    }else if(month >= 10 && month <= 12) {
+        return "Forth quarter";
+    }else {
+        return "enter correct data";
+    }
+}
+console.log(partOfMonth(2));
+console.log(partOfMonth(20));
+
+
+
+
+
+ 

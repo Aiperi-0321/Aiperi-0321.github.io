@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple E-commerce</title>
+    <link rel="stylesheet" href="myProj.css" />
+  </head>
+  <body>
+    <img src="images/nailTech" />
+    <div id="product-list" class="product-list"></div>
 
-    <div>
-        <button class="get">Get Todos</button>
-        <button class="post">Create Todo</button>
+    <button id="add-product-btn" class="add-product-btn">Add Product</button>
+
+    <div id="cart" class="cart">
+      <button id="toggle-cart-btn" class="toggle-cart-btn">
+        Cart (<span id="cart-count">0</span>)
+      </button>
+      <div id="cart-dropdown" class="cart-dropdown hidden">
+        <div id="cart-items" class="cart-items"></div>
+        <button id="checkout-btn" class="checkout-btn">Checkout</button>
+      </div>
     </div>
 
-    <div>
-        <input type="text" class="fullname">
-        <input type="text" class="email">
-        <button class="save">Ok</button>
-        <ul>
-            
-        </ul>
-    </div>
-    
-
-
-    <script src="index.js"></script>
-</body>
+    <script src="myProj.js"></script>
+  </body>
 </html>

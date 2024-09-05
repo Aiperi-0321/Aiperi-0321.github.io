@@ -10,17 +10,37 @@ const render = (todos) => {
   todos.forEach((element) => {
     const li = `<li>${element.title} <input type="checkbox" ${
       element.completed ? "checked" : ""
-    } /> <button class="edit-btn" data-index="${
-      element.id
-    }">Edit</button></li>`;
+    } /> <button class="edit-btn" data-index="${element.id}">Edit</button>
+    <button class="delete-btn" data-index="${element.id}">Delete</button></li>`;
     ul.insertAdjacentHTML("beforeend", li);
   });
 
   const editBtns = document.querySelectorAll(".edit-btn");
+  const deleteBtn = document.querySelector(".delete-btn");
 
   editBtns.forEach((btn) => {
-    btn.addEventListener("click", (e) => {});
+    btn.addEventListener("click", (e) => {
+      currentChangingTodo = todos.find(
+        (todo) => todo.id == parseInt(e.target.id)
+      );
+      console.log(currentChangingTodo);
+      myInput.value = currentChangingTodo.title;
+    });
   });
+
+  deleteBtn.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const itemId = e.target.dataset.index;
+      fetch(url + "/" + itemId, {
+        method: "DELETE",
+      })
+      .then((res) => res.json())
+      .then(() => {
+        getTodos();
+      })
+      .catch((error) => console.log(error));
+    })
+  })
 };
 // render todos function
 const getTodos = () => {
