@@ -1,24 +1,23 @@
 const url = "http://solar-poised-salad.glitch.me/products";
 
 async function getProducts() {
-    try {
-        const response = await axios(url);
-        console.log(response, data);
-        }
-         catch (error) {
-        console.log(error);
-    }
+  try {
+    const response = await axios(url);
+    console.log(response, data);
+  } catch (error) {
+    console.log(error);
+  }
 }
 getProducts();
 
 const apiKey = "03343139cc71a45be5036e40f80b9e03";
-const newurl = `https://api.themoviedb.org/3/movie/now_playing?api_key=`;
+const newurl = "https://api.themoviedb.org/3/movie/now_playing?api_key=";
 
 async function getMovies() {
     loader.style.display = "block";
     try {
         const{
-        data: {result}, 
+        data: {result},
     } = await axios(newurl + apiKey);
     const moviesContainer = document.querySelector(".movies");
     result.forEach((movie) => {
@@ -38,7 +37,8 @@ async function getMovies() {
             location.href = `movie.html?movieId=${this.id}`;
         });
     });
-    
+
+
 ////////////
     const favBtns = document.querySelectorAll(".favorite-btn");
     favBtns.forEach((btn) => {
@@ -56,7 +56,5 @@ document.querySelector("#test").addEventListener("click", function (e) {
     localStorage.clear();
     const currentItem = JSON.parse(localStorage.getItem("test"));
 });
-
-
-
+getMovies();
 
